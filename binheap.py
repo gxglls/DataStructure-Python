@@ -50,6 +50,7 @@ class BinHeap():
             else:
                 return i * 2 + 1
 
+    #根据最小二叉堆的定义，父节点总小于子节点，因此，我们只关注有子节点的部分，也就是非叶子节点。所以只需要对数组的前半部分进行调整即可
     def buildHeap(self, alist):
         i = len(alist) // 2
         self.binHeapCount = len(alist)
